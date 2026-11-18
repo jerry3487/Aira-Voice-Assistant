@@ -1,0 +1,6 @@
+{
+  "name": "LocalVox MCP — Local AI Voice Assistant",
+  "description": "Private, local-first multilingual AI voice assistant powered by Ollama, faster-whisper, Piper TTS, SQLite, and a custom Python MCP server.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

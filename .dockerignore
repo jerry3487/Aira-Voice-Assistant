@@ -1,0 +1,13 @@
+node_modules
+dist
+.git
+.playwright-cli
+.aistudio
+backend/data/*.db
+backend/data/*.db-wal
+backend/data/*.db-shm
+backend/voices/*.onnx
+backend/voices/*.onnx.json
+__pycache__
+*.pyc
+.env

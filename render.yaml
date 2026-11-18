@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: aira-voice
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: NODE_ENV=production node --experimental-strip-types server.ts
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22.22.0
+      - key: LLM_API_URL
+        sync: false
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_API_MODEL
+        value: qwen/qwen3.8-27b
+      - key: VITE_CLERK_PUBLISHABLE_KEY
+        sync: false
+      - key: CLERK_PUBLISHABLE_KEY
+        sync: false
+      - key: CLERK_SECRET_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_PUBLISHABLE_KEY
+        sync: false
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_PUBLISHABLE_KEY
+        sync: false
